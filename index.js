@@ -21,7 +21,7 @@ app.post('/', (req, res) => {
   const { username } = req.body;
   // VULNERABILITY: User input is directly interpolated into the HTML response
   // This allows for XSS attacks if the input contains JavaScript code
-  res.send(`<h1>Hello, ${username}</h1>`);
+  res.send(`<h1>Hello from Taofeek, ${username}</h1>`);
 });
 
 app.listen(3000, () => console.log('App running on port 3000'));
